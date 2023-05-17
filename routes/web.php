@@ -25,17 +25,12 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::middleware('admin')
+Route::prefix('/admin/amigos')
+    ->as('amigos.')
     ->group(function () {
-        Route::prefix('/admin/amigos')
-            ->as('amigos.')
-            ->group(function () {
-                Route::get('/', ShowAmigosController::class)->name('amigos');
+        Route::get('/', ShowAmigosController::class)->name('amigos');
 
-                Route::get('{ID}/edit', EditAmigosController::class)->name('edit');
-                Route::get('/{ID}', DeleteAmigoController::class)->name('delete');
-                Route::put('{id}/update', UpdateAmigosController::class)->name('update');
-            });
+        Route::get('{ID}/edit', EditAmigosController::class)->name('edit');
+        Route::get('/{ID}', DeleteAmigoController::class)->name('delete');
+        Route::put('{id}/update', UpdateAmigosController::class)->name('update');
     });
-
-

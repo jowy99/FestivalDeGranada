@@ -12,7 +12,9 @@ class DeleteAmigoController extends Controller
 {
     public function __invoke(Request $request, int $id)
     {
-        Amigos::query()->findOrFail($id)->delete();
+        $amigo = Amigos::query()->findOrFail($id);
+        $amigo->delete();
+
         return redirect()->back();
     }
 }
