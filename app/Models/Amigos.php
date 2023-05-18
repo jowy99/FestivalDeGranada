@@ -10,4 +10,5 @@ class Amigos extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $primaryKey = 'ID';
 }

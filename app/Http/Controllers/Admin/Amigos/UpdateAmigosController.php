@@ -19,10 +19,8 @@ class UpdateAmigosController extends Controller
         $data = $request->validated();
 
         $amigos = Amigos::query()->findOrFail($id);
-//        dd($data);
-
         $amigos->update($data);
 
-        return Redirect::route('amigos.amigos', $amigos->ID);
+        return Redirect::route('amigos.edit', $amigos->ID);
     }
 }

@@ -9,7 +9,7 @@ use App\Models\Amigos;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 
-class EditAmigosController extends Controller
+class ShowEditAmigosController extends Controller
 {
     public function __invoke(Request $request, int $id): View
     {

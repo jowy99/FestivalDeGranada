@@ -6,28 +6,29 @@ namespace App\Http\Requests\Amigos;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateAmigosRequest extends FormRequest
+class StoreAmigoRequest extends FormRequest
 {
     public function rules(): array
     {
         return [
             'N_AMIGO' => ['nullable'],
-            'NOMBRE' => ['nullable'],
-            'APELLIDOS' => ['nullable'],
+            'NOMBRE' => ['required'],
+            'APELLIDOS' => ['required'],
             'CATEGORIA' => ['nullable'],
             'CARGO' => ['nullable'],
-            'DNI' => ['nullable'],
-            'CANTIDAD' => ['nullable'],
+            'DNI' => ['required'],
+            'CANTIDAD' => ['required'],
             'CONCEPTO' => ['nullable'],
-            'IBAN' => ['nullable'],
-            'EMAIL' => ['nullable'],
-            'TELEFONO' => ['nullable'],
-            'DIRECCION' => ['nullable'],
-            'CP' => ['nullable'],
-            'PROVINCIA' => ['nullable'],
+            'IBAN' => ['required'],
+            'EMAIL' => ['required'],
+            'TELEFONO' => ['required'],
+            'DIRECCION' => ['required'],
+            'CP' => ['required'],
+            'PROVINCIA' => ['required'],
             'VISUALIZAR_NOMBRE' => ['nullable']
         ];
     }
+
     public function authorize(): bool
     {
         return true;
