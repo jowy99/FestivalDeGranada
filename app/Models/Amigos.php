@@ -9,6 +9,5 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Amigos extends Model
 {
     use HasFactory;
-    use SoftDeletes;
-    protected $primaryKey = 'ID';
+    protected $guarded = ['id'];
 }

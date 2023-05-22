@@ -15,9 +15,9 @@ class StoreAmigosController extends Controller
     public function __invoke(StoreAmigoRequest $request): RedirectResponse
     {
         $data = $request->validated();
-        $amigos = Amigos::query()->create($data);
+        Amigos::query()->create($data);
 
 
-        return Redirect::route('amigos.edit', $amigos->id);
+        return Redirect::route('amigos.amigos');
     }
 }

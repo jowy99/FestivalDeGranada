@@ -11,21 +11,21 @@ class StoreAmigoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'N_AMIGO' => ['nullable'],
-            'NOMBRE' => ['required'],
-            'APELLIDOS' => ['required'],
-            'CATEGORIA' => ['nullable'],
-            'CARGO' => ['nullable'],
-            'DNI' => ['required'],
-            'CANTIDAD' => ['required'],
-            'CONCEPTO' => ['nullable'],
-            'IBAN' => ['required'],
-            'EMAIL' => ['required'],
-            'TELEFONO' => ['required'],
-            'DIRECCION' => ['required'],
-            'CP' => ['required'],
-            'PROVINCIA' => ['required'],
-            'VISUALIZAR_NOMBRE' => ['nullable']
+            'n_amigo' => ['nullable'],
+            'nombre' => ['nullable'],
+            'apellidos' => ['nullable'],
+            'dni' => ['nullable'],
+            'telefono' => ['nullable'],
+            'email' => ['nullable'],
+            'cargo' => ['nullable'],
+            'categoria' => ['nullable'],
+            'provincia' => ['nullable'],
+            'direccion' => ['nullable'],
+            'codigo_postal' => ['nullable'],
+            'visualizar' => ['nullable'],
+            'iban' => ['nullable'],
+            'cantidad' => ['nullable'],
+            'concepto' => ['nullable']
         ];
     }
 

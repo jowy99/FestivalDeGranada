@@ -9,26 +9,26 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('amigos', function (Blueprint $table) {
-            $table->id('ID')->unique();
-            $table->string('N_AMIGO')->nullable();
+            $table->id('id')->unique();
+            $table->string('n_amigo')->nullable();
 
-            $table->string('NOMBRE')->nullable();
-            $table->string('APELLIDOS')->nullable();
-            $table->string('CATEGORIA')->nullable();
-            $table->string('CARGO')->nullable();
-            $table->string('DNI')->nullable();
+            $table->string('nombre')->nullable();
+            $table->string('apellidos')->nullable();
+            $table->string('categoria')->nullable();
+            $table->string('cargo')->nullable();
+            $table->string('dni')->nullable();
 
-            $table->float('CANTIDAD')->nullable();
-            $table->string('CONCEPTO')->nullable();
-            $table->string('IBAN')->nullable();
+            $table->float('cantidad')->nullable();
+            $table->string('concepto')->nullable();
+            $table->string('iban')->nullable();
 
-            $table->string('EMAIL')->nullable();
-            $table->string('TELEFONO')->nullable();
-            $table->string('DIRECCION')->nullable();
-            $table->string('CP')->nullable();
-            $table->string('PROVINCIA')->nullable();
+            $table->string('email')->nullable();
+            $table->string('telefono')->nullable();
+            $table->string('direccion')->nullable();
+            $table->string('cp')->nullable();
+            $table->string('provincia')->nullable();
 
-            $table->boolean('VISUALIZAR_NOMBRE')->default(0)->nullable();
+            $table->boolean('visualizar_nombre')->default(0)->nullable();
 
 
 

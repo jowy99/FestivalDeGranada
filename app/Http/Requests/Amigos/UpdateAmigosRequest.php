@@ -11,21 +11,21 @@ class UpdateAmigosRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'N_AMIGO' => ['nullable'],
-            'NOMBRE' => ['nullable'],
-            'APELLIDOS' => ['nullable'],
-            'CATEGORIA' => ['nullable'],
-            'CARGO' => ['nullable'],
-            'DNI' => ['nullable'],
-            'CANTIDAD' => ['nullable'],
-            'CONCEPTO' => ['nullable'],
-            'IBAN' => ['nullable'],
-            'EMAIL' => ['nullable'],
-            'TELEFONO' => ['nullable'],
-            'DIRECCION' => ['nullable'],
-            'CP' => ['nullable'],
-            'PROVINCIA' => ['nullable'],
-            'VISUALIZAR_NOMBRE' => ['nullable']
+            'n_amigo' => ['nullable'],
+            'nombre' => ['nullable'],
+            'apellidos' => ['nullable'],
+            'dni' => ['nullable'],
+            'telefono' => ['nullable'],
+            'email' => ['nullable'],
+            'cargo' => ['nullable'],
+            'categoria' => ['nullable'],
+            'provincia' => ['nullable'],
+            'direccion' => ['nullable'],
+            'codigo_postal' => ['nullable'],
+            'visualizar' => ['nullable'],
+            'iban' => ['nullable'],
+            'cantidad' => ['nullable'],
+            'concepto' => ['nullable']
         ];
     }
     public function authorize(): bool
